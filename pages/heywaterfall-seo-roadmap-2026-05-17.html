@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Hey Waterfall 美国 Google SEO 关键词优化路线、页面修改方案和首批内容计划。"
+    />
+    <title>Hey Waterfall SEO 关键词优化路线</title>
+    <style>
+      :root {
+        --bg: #f4f6f1;
+        --paper: #fffdf7;
+        --ink: #18231d;
+        --muted: #667067;
+        --line: #d8ded4;
+        --accent: #0f6b55;
+        --accent-dark: #093d32;
+        --accent-soft: #e2f0e8;
+        --gold: #b9892c;
+        --red: #8d3a20;
+        --shadow: 0 22px 70px rgba(24, 35, 29, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        min-width: 320px;
+        scroll-behavior: smooth;
+        background:
+          radial-gradient(circle at 12% 0%, rgba(15, 107, 85, 0.16), transparent 28rem),
+          radial-gradient(circle at 88% 18%, rgba(185, 137, 44, 0.12), transparent 24rem),
+          linear-gradient(135deg, #f4f6f1 0%, #eef3ed 46%, #fbfaf4 100%);
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family:
+          ui-sans-serif,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          "PingFang SC",
+          "Microsoft YaHei",
+          sans-serif;
+        letter-spacing: 0;
+      }
+
+      body::before {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        content: "";
+        opacity: 0.38;
+        background-image:
+          linear-gradient(rgba(24, 35, 29, 0.045) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(24, 35, 29, 0.045) 1px, transparent 1px);
+        background-size: 34px 34px;
+        mask-image: linear-gradient(to bottom, #000, transparent 84%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        width: min(1160px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 28px 0 64px;
+      }
+
+      .back {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px 14px;
+        background: rgba(255, 253, 247, 0.7);
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
+        gap: 28px;
+        align-items: stretch;
+        padding: 46px 0 32px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 18px;
+        color: var(--accent-dark);
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 34px;
+        height: 2px;
+        content: "";
+        background: var(--accent);
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", "Songti SC", serif;
+        letter-spacing: 0;
+      }
+
+      h1 {
+        max-width: 850px;
+        font-size: clamp(42px, 7vw, 82px);
+        line-height: 0.98;
+      }
+
+      .lead {
+        max-width: 760px;
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: clamp(17px, 2vw, 21px);
+        line-height: 1.72;
+      }
+
+      .brief {
+        border: 1px solid rgba(15, 107, 85, 0.2);
+        border-radius: 8px;
+        padding: 22px;
+        background: rgba(255, 253, 247, 0.78);
+        box-shadow: var(--shadow);
+      }
+
+      .brief h2 {
+        margin-bottom: 16px;
+        font-size: 28px;
+      }
+
+      .brief dl {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+      }
+
+      .brief div {
+        border-top: 1px solid var(--line);
+        padding-top: 12px;
+      }
+
+      .brief div:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      dt {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      dd {
+        margin: 4px 0 0;
+        font-weight: 850;
+        line-height: 1.55;
+      }
+
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        border: 1px solid rgba(216, 222, 212, 0.85);
+        border-radius: 8px;
+        padding: 10px;
+        background: rgba(255, 253, 247, 0.86);
+        box-shadow: 0 10px 34px rgba(24, 35, 29, 0.08);
+        backdrop-filter: blur(12px);
+      }
+
+      .nav a {
+        flex: 0 0 auto;
+        border-radius: 8px;
+        padding: 10px 12px;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 850;
+        text-decoration: none;
+      }
+
+      .nav a:hover,
+      .nav a:focus-visible {
+        background: var(--accent-soft);
+        color: var(--accent-dark);
+        outline: none;
+      }
+
+      section {
+        margin-top: 34px;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 18px;
+        margin-bottom: 16px;
+      }
+
+      .section-head h2 {
+        font-size: clamp(30px, 4vw, 48px);
+        line-height: 1.05;
+      }
+
+      .section-head p {
+        max-width: 560px;
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.68;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .card,
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 253, 247, 0.82);
+      }
+
+      .card {
+        min-height: 230px;
+        padding: 22px;
+      }
+
+      .card .label {
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 950;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      .card h3 {
+        margin-top: 18px;
+        font-size: 26px;
+        line-height: 1.12;
+      }
+
+      .card p,
+      .card li,
+      .panel p,
+      .panel li {
+        color: var(--muted);
+        line-height: 1.68;
+      }
+
+      .card ul,
+      .panel ul,
+      .panel ol {
+        display: grid;
+        gap: 8px;
+        margin: 14px 0 0;
+        padding-left: 19px;
+      }
+
+      .panel {
+        padding: 24px;
+      }
+
+      .wide {
+        grid-column: span 2;
+      }
+
+      .kpis {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .kpi {
+        border: 1px solid rgba(15, 107, 85, 0.16);
+        border-radius: 8px;
+        padding: 18px;
+        background: rgba(226, 240, 232, 0.64);
+      }
+
+      .kpi strong {
+        display: block;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 34px;
+        line-height: 1;
+      }
+
+      .kpi span {
+        display: block;
+        margin-top: 9px;
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 253, 247, 0.9);
+      }
+
+      table {
+        width: 100%;
+        min-width: 760px;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border-bottom: 1px solid var(--line);
+        padding: 14px 16px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        background: var(--accent-dark);
+        color: #fff;
+        font-size: 13px;
+        letter-spacing: 0.04em;
+      }
+
+      td {
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .tag {
+        display: inline-flex;
+        border-radius: 999px;
+        padding: 4px 9px;
+        background: var(--accent-soft);
+        color: var(--accent-dark);
+        font-size: 12px;
+        font-weight: 900;
+        white-space: nowrap;
+      }
+
+      .tag.warn {
+        background: #f6ead2;
+        color: #734d12;
+      }
+
+      .tag.risk {
+        background: #f8e4dc;
+        color: var(--red);
+      }
+
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .step {
+        position: relative;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 20px;
+        background: rgba(255, 253, 247, 0.84);
+      }
+
+      .step::before {
+        display: grid;
+        width: 36px;
+        height: 36px;
+        place-items: center;
+        border-radius: 50%;
+        margin-bottom: 18px;
+        background: var(--accent-dark);
+        color: #fff;
+        content: attr(data-step);
+        font-weight: 950;
+      }
+
+      .step h3 {
+        font-size: 22px;
+      }
+
+      .step p {
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .callout {
+        border-left: 4px solid var(--gold);
+        border-radius: 8px;
+        padding: 20px 22px;
+        background: rgba(255, 253, 247, 0.92);
+      }
+
+      .callout strong {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--accent-dark);
+      }
+
+      footer {
+        margin-top: 42px;
+        border-top: 1px solid var(--line);
+        padding-top: 22px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      code {
+        border: 1px solid rgba(15, 107, 85, 0.12);
+        border-radius: 6px;
+        padding: 2px 5px;
+        background: rgba(226, 240, 232, 0.58);
+        color: var(--accent-dark);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.92em;
+      }
+
+      @media (max-width: 920px) {
+        .hero,
+        .grid,
+        .timeline,
+        .kpis {
+          grid-template-columns: 1fr;
+        }
+
+        .wide {
+          grid-column: auto;
+        }
+
+        .section-head {
+          display: block;
+        }
+
+        .section-head p {
+          margin-top: 12px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .shell {
+          width: min(100% - 22px, 1160px);
+          padding-top: 18px;
+        }
+
+        .hero {
+          padding-top: 28px;
+        }
+
+        .card,
+        .panel,
+        .brief,
+        .step {
+          padding: 18px;
+        }
+
+        th,
+        td {
+          padding: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <a class="back" href="../index.html">← 返回 H5 Share 目录</a>
+
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Internal SEO Brief · 2026-05-17</p>
+          <h1>Hey Waterfall SEO 关键词优化路线</h1>
+          <p class="lead">
+            这份页面把本次对话中形成的关键词资产、页面修改建议、内容简报和整体执行路线压缩成一份公司同事可快速阅读的 H5 说明。
+            第一阶段聚焦美国 Google 自然流量，优先围绕 Waterfall Bead 建立 SEO 基础。
+          </p>
+        </div>
+        <aside class="brief" aria-label="概要信息">
+          <h2>一句话结论</h2>
+          <dl>
+            <div>
+              <dt>核心产品</dt>
+              <dd>Waterfall Bead</dd>
+            </div>
+            <div>
+              <dt>主关键词方向</dt>
+              <dd><code>clip-on hearing aids for seniors</code></dd>
+            </div>
+            <div>
+              <dt>首要动作</dt>
+              <dd>先优化 Bead 产品页，再用 2-4 篇文章做长尾流量和内链。</dd>
+            </div>
+            <div>
+              <dt>重要提醒</dt>
+              <dd>OTC、FDA、轻中度听损等词需要合规确认后再强化。</dd>
+            </div>
+          </dl>
+        </aside>
+      </header>
+
+      <nav class="nav" aria-label="页面导航">
+        <a href="#resources">上方资料</a>
+        <a href="#conclusions">关键结论</a>
+        <a href="#roadmap">整体路线</a>
+        <a href="#actions">执行顺序</a>
+        <a href="#risks">风险事项</a>
+        <a href="#open-questions">待确认</a>
+      </nav>
+
+      <section id="resources" aria-labelledby="resources-title">
+        <div class="section-head">
+          <h2 id="resources-title">页面上方：三份核心资料</h2>
+          <p>本次 SEO 工作已形成三份基础资料：关键词表、SEO 修改方案、文章内容简报。这里保留同事最需要先看的摘要。</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <span class="label">Keyword Map</span>
+            <h3>关键词表</h3>
+            <p>
+              关键词已按 P0、P1、P2 分组，并加入中文对照、目标页面、合规风险和备注。
+              当前总计 58 条：P0 9 条、P1 22 条、P2 27 条。
+            </p>
+            <ul>
+              <li>P0：优先放到产品页、首页、核心文章。</li>
+              <li>P1：放到文章、FAQ、产品页补充内容。</li>
+              <li>P2：涉及 OTC、FDA、竞品和价格词，先谨慎处理。</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="label">Page Plan</span>
+            <h3>SEO 修改方案</h3>
+            <p>
+              已明确 Bead 产品页、首页、产品集合页和首批内容页的关键词映射、SEO Title、H1、Meta Description 和技术检查项。
+            </p>
+            <ul>
+              <li>优先检查 Shopify 页面 <code>&lt;title&gt;</code> 是否为空或异常。</li>
+              <li>Bead 页面主攻老年人耳夹式助听器。</li>
+              <li>Meta Description 建议控制在 150-160 字符左右。</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <span class="label">Content Briefs</span>
+            <h3>文章内容简报</h3>
+            <p>
+              已规划 4 篇首批博客/FAQ 内容，用来承接长尾搜索流量，并通过内链把流量导向 Bead 产品页。
+            </p>
+            <ul>
+              <li>Clip-On vs In-Ear Hearing Aids</li>
+              <li>Best Easy-to-Use Hearing Aids for Seniors</li>
+              <li>Rechargeable Hearing Aids for Seniors</li>
+              <li>OTC Hearing Aids for Mild to Moderate Hearing Loss</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="kpis" aria-label="关键词统计">
+          <div class="kpi"><strong>58</strong><span>关键词总数</span></div>
+          <div class="kpi"><strong>9</strong><span>P0 第一优先级</span></div>
+          <div class="kpi"><strong>22</strong><span>P1 第二优先级</span></div>
+          <div class="kpi"><strong>27</strong><span>P2 第三优先级</span></div>
+        </div>
+      </section>
+
+      <section id="conclusions" aria-labelledby="conclusions-title">
+        <div class="section-head">
+          <h2 id="conclusions-title">关键结论</h2>
+          <p>SEO 初期不建议全站分散发力。第一阶段应该集中把 Bead 这个产品页做清楚、做强，再用文章和内链支持它。</p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>主题</th>
+                <th>结论</th>
+                <th>说明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="tag">产品焦点</span></td>
+                <td>第一阶段只集中做 Waterfall Bead。</td>
+                <td>Bead 的耳夹式、开放式、可充电、老人易用定位更适合先抢长尾转化词。</td>
+              </tr>
+              <tr>
+                <td><span class="tag">主关键词</span></td>
+                <td><code>clip-on hearing aids for seniors</code></td>
+                <td>这是产品形态、目标人群和购买意图结合度最高的方向。</td>
+              </tr>
+              <tr>
+                <td><span class="tag">页面策略</span></td>
+                <td>一个页面只服务一个主关键词方向。</td>
+                <td>避免多个页面互相抢同一关键词，尤其 Bead 页面和博客文章之间要分工清楚。</td>
+              </tr>
+              <tr>
+                <td><span class="tag warn">内容策略</span></td>
+                <td>先写 2-4 篇支持 Bead 的文章。</td>
+                <td>文章负责获取长尾流量，内链负责把流量导回产品页。</td>
+              </tr>
+              <tr>
+                <td><span class="tag risk">合规策略</span></td>
+                <td>OTC、FDA、听损程度相关词先保守使用。</td>
+                <td>不要写治疗、恢复正常听力、适合重度听损或未经确认的 FDA approved。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="roadmap" aria-labelledby="roadmap-title">
+        <div class="section-head">
+          <h2 id="roadmap-title">正文：关键词优化整体路线</h2>
+          <p>这部分是完整执行路线，适合新同事按步骤理解“现在做到哪、下一步做什么、为什么这么做”。</p>
+        </div>
+
+        <div class="grid">
+          <article class="panel wide">
+            <h3>1. 当前阶段</h3>
+            <p>
+              目前完成的是 SEO 准备工作，也就是关键词地基。已明确美国市场、Google 自然流量、独立站、Bead 产品优先。
+              还没有完成 Shopify 页面修改、博客发布、Google Search Console 监控和数据复盘。
+            </p>
+          </article>
+          <article class="panel">
+            <h3>2. 核心产品</h3>
+            <p>
+              第一阶段集中做 Waterfall Bead。关键词定位包括耳夹式、老人易用、可充电、开放式佩戴、舒适轻量、AI 降噪和日常对话场景。
+            </p>
+          </article>
+          <article class="panel">
+            <h3>3. 主关键词方向</h3>
+            <p>
+              主词是 <code>clip-on hearing aids for seniors</code>。扩展词包括老年人助听器、易用型助听器、可充电助听器、隐蔽型助听器和开放式助听器。
+            </p>
+          </article>
+          <article class="panel wide">
+            <h3>4. 页面分配</h3>
+            <ul>
+              <li>Bead 产品页：主攻 <code>clip-on hearing aids for seniors</code>。</li>
+              <li>首页：主攻品牌、AI hearing aids 和产品集合方向。</li>
+              <li>产品集合页：主攻 <code>buy hearing aids online</code>。</li>
+              <li>博客文章：承接长尾词、问题词和对比词。</li>
+              <li>FAQ：承接具体用户疑问词。</li>
+            </ul>
+          </article>
+          <article class="panel">
+            <h3>5. 产品页优先</h3>
+            <p>
+              Bead 页面要先改 SEO Title、Meta Description、H1、前 100 字、H2、图片 Alt、FAQ 和内链。
+            </p>
+          </article>
+          <article class="panel">
+            <h3>6. 内容支持</h3>
+            <p>
+              首批文章不是直接卖货，而是帮助 Google 理解网站主题，并把长尾搜索流量导向 Bead。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="actions" aria-labelledby="actions-title">
+        <div class="section-head">
+          <h2 id="actions-title">推荐执行顺序</h2>
+          <p>适合小白团队按周推进，避免一开始做太散。</p>
+        </div>
+
+        <div class="timeline">
+          <article class="step" data-step="1">
+            <h3>第 1 周</h3>
+            <p>修改 Bead 产品页 SEO Title、Meta Description、H1，补图片 Alt Text，检查 FAQ。</p>
+          </article>
+          <article class="step" data-step="2">
+            <h3>第 2 周</h3>
+            <p>发布 <code>Clip-On vs In-Ear Hearing Aids</code>，并从文章链接到 Bead。</p>
+          </article>
+          <article class="step" data-step="3">
+            <h3>第 3 周</h3>
+            <p>发布 <code>Best Easy-to-Use Hearing Aids for Seniors</code>，在首页或集合页增加 Bead 入口。</p>
+          </article>
+          <article class="step" data-step="4">
+            <h3>第 4 周</h3>
+            <p>检查 Google Search Console，提交 sitemap，确认 Bead 页面是否收录并记录曝光关键词。</p>
+          </article>
+        </div>
+
+        <div class="callout" style="margin-top: 16px">
+          <strong>第 2 个月重点</strong>
+          根据 GSC 数据调整标题和描述，补发可充电助听器文章；OTC 文章在合规确认后再发布或强化。
+        </div>
+      </section>
+
+      <section id="risks" aria-labelledby="risks-title">
+        <div class="section-head">
+          <h2 id="risks-title">风险和注意事项</h2>
+          <p>助听器属于敏感品类，不能只看关键词流量，还要考虑合规和用户信任。</p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>风险</th>
+                <th>不要这样写</th>
+                <th>建议写法</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>医疗效果过度承诺</td>
+                <td>治愈听力损失、恢复正常听力</td>
+                <td>designed to support everyday listening；helps with clearer conversations</td>
+              </tr>
+              <tr>
+                <td>适用人群过宽</td>
+                <td>适合所有听损、适合重度听损</td>
+                <td>for adults with perceived mild to moderate hearing loss，且需资质确认</td>
+              </tr>
+              <tr>
+                <td>FDA 表述混用</td>
+                <td>未确认就写 FDA approved</td>
+                <td>先确认具体资质，再区分 FDA listed、registered、approved</td>
+              </tr>
+              <tr>
+                <td>竞品词侵权或争议</td>
+                <td>直接把 Shokz 等竞品名放标题抢词</td>
+                <td>先做中性对比内容，竞品页面需事实核查和合规审核</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="open-questions" aria-labelledby="open-title">
+        <div class="section-head">
+          <h2 id="open-title">待确认问题</h2>
+          <p>这些问题会影响下一轮 SEO 强化，不确认前先按保守版本执行。</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <span class="label">Compliance</span>
+            <h3>OTC / FDA 资质</h3>
+            <p>需要确认哪些页面可以正式写 OTC、FDA listed、FDA registered，以及是否有任何 FDA approved 相关依据。</p>
+          </article>
+          <article class="card">
+            <span class="label">Product Specs</span>
+            <h3>Bead 功能边界</h3>
+            <p>需要确认蓝牙能力、通话能力、TV 兼容性、续航、IP55、防汗防水等参数是否稳定且可公开使用。</p>
+          </article>
+          <article class="card">
+            <span class="label">Data</span>
+            <h3>GSC 和广告数据</h3>
+            <p>目前没有使用真实 GSC 或广告转化数据。上线后要用曝光、点击、排名、CTR 来调整关键词优先级。</p>
+          </article>
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          页面已根据公开分享要求做基础脱敏：未包含 Notion 页面 ID、本地绝对路径、账号、密钥、密码、个人联系方式或内部系统地址。
+          由于 SEO 方案包含产品和市场策略，继续公开传播前建议由业务负责人确认分享范围。
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
