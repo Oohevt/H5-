@@ -1,0 +1,11 @@
+[
+  {
+    "title": "HTML 好用到难以置信项目介绍",
+    "description": "介绍 html-effectiveness 的核心思路：把复杂 Markdown 长文转成可阅读、可交互、可分享的单文件 HTML 可视化文档。",
+    "file": "pages/html-effectiveness-project-intro.html",
+    "category": "AI 输出格式",
+    "tags": ["H5 文档", "单文件 HTML", "参考项目"],
+    "createdAt": "2026-05-17",
+    "updatedAt": "2026-05-17"
+  }
+]

@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML 好用到难以置信项目介绍</title>
+    <style>
+      :root {
+        --bg: #101713;
+        --panel: #f6f8f2;
+        --ink: #17211b;
+        --muted: #68736b;
+        --line: rgba(23, 33, 27, 0.16);
+        --accent: #0f6b55;
+        --gold: #d7b46a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at 18% 8%, rgba(215, 180, 106, 0.22), transparent 20rem),
+          radial-gradient(circle at 82% 24%, rgba(15, 107, 85, 0.34), transparent 26rem),
+          var(--bg);
+        color: var(--panel);
+        font-family:
+          ui-sans-serif,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+      }
+
+      .wrap {
+        width: min(1080px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 52px 0;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 0.62fr);
+        gap: 28px;
+        align-items: stretch;
+      }
+
+      .hero h1 {
+        margin: 0;
+        max-width: 760px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(46px, 8vw, 92px);
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        max-width: 660px;
+        margin: 24px 0 0;
+        color: rgba(246, 248, 242, 0.76);
+        font-size: clamp(17px, 2vw, 21px);
+        line-height: 1.72;
+      }
+
+      .back {
+        display: inline-flex;
+        margin-bottom: 32px;
+        color: rgba(246, 248, 242, 0.78);
+        text-decoration: none;
+        font-weight: 800;
+      }
+
+      .back:hover {
+        color: #fff;
+      }
+
+      .note {
+        border: 1px solid rgba(246, 248, 242, 0.16);
+        border-radius: 8px;
+        padding: 22px;
+        background: rgba(246, 248, 242, 0.08);
+      }
+
+      .note strong {
+        display: block;
+        margin-bottom: 14px;
+        color: #fff;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 28px;
+      }
+
+      .note p {
+        margin: 0;
+        color: rgba(246, 248, 242, 0.72);
+        line-height: 1.75;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 42px;
+      }
+
+      .card {
+        min-height: 220px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 24px;
+        background: var(--panel);
+        color: var(--ink);
+      }
+
+      .card span {
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .card h2 {
+        margin: 18px 0 12px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 28px;
+        line-height: 1.08;
+      }
+
+      .card p,
+      .card li {
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .card p {
+        margin: 0;
+      }
+
+      .card ul {
+        display: grid;
+        gap: 8px;
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .wide {
+        grid-column: span 2;
+      }
+
+      .workflow {
+        margin-top: 16px;
+        border: 1px solid rgba(246, 248, 242, 0.14);
+        border-radius: 8px;
+        padding: 26px;
+        background: rgba(246, 248, 242, 0.08);
+      }
+
+      .workflow h2 {
+        margin: 0 0 18px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 36px;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        counter-reset: step;
+      }
+
+      .step {
+        border-left: 2px solid var(--gold);
+        padding: 4px 0 4px 14px;
+        color: rgba(246, 248, 242, 0.76);
+        line-height: 1.6;
+      }
+
+      .step::before {
+        display: block;
+        counter-increment: step;
+        content: "0" counter(step);
+        color: var(--gold);
+        font-weight: 900;
+      }
+
+      @media (max-width: 860px) {
+        .hero,
+        .grid,
+        .steps {
+          grid-template-columns: 1fr;
+        }
+
+        .wide {
+          grid-column: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <a class="back" href="../index.html">← 返回 H5 Share 目录</a>
+
+      <section class="hero">
+        <div>
+          <h1>HTML 好用到难以置信，是一种新的 AI 输出格式。</h1>
+          <p class="lead">
+            当 Markdown 长文开始变得难读，可以让 AI 直接生成一个可打开、可阅读、可交互的单文件 HTML 页面。
+            html-effectiveness 的价值不只是示例本身，而是提醒我们：复杂内容可以被组织成网页，而不是只堆成文本。
+          </p>
+        </div>
+        <aside class="note">
+          <strong>核心判断</strong>
+          <p>
+            单文件 HTML 适合作为方案、报告、原型、复盘、流程图和研究解释的交付物。它既能本地打开，也能部署成公网链接。
+          </p>
+        </aside>
+      </section>
+
+      <section class="grid" aria-label="项目理解">
+        <article class="card">
+          <span>01 / What</span>
+          <h2>不是传统 App 工程</h2>
+          <p>它更像一组 AI 生成的自包含 HTML 示例集，每个文件都能独立打开、独立阅读、独立分享。</p>
+        </article>
+        <article class="card">
+          <span>02 / Why</span>
+          <h2>比 Markdown 更适合复杂表达</h2>
+          <p>当内容包含结构、对比、流程、交互、图形或演示节奏时，HTML 可以把信息层次做得更清楚。</p>
+        </article>
+        <article class="card">
+          <span>03 / How</span>
+          <h2>作为输出格式参考</h2>
+          <p>以后遇到复杂需求，不只让 AI 写长文，也可以要求它生成一个单文件 HTML 可视化文档。</p>
+        </article>
+        <article class="card wide">
+          <span>Use Cases</span>
+          <h2>适合沉淀的页面类型</h2>
+          <ul>
+            <li>项目介绍、产品方案、报价说明、汇报页</li>
+            <li>研究报告、状态报告、事故复盘、流程解释</li>
+            <li>临时 Demo、交互原型、小型编辑器和 Prompt 调试器</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span>Rule</span>
+          <h2>公开分享前先脱敏</h2>
+          <p>如果页面要放到 GitHub Pages，就不要包含客户机密、API Key、账号密码或内部系统地址。</p>
+        </article>
+      </section>
+
+      <section class="workflow">
+        <h2>推荐使用方式</h2>
+        <div class="steps">
+          <div class="step">让 AI 根据需求生成一个自包含 HTML。</div>
+          <div class="step">保存到 H5 分享仓库的 pages 目录。</div>
+          <div class="step">更新首页目录数据，写清标题、描述、分类和日期。</div>
+          <div class="step">推送到 GitHub Pages，返回公网访问链接。</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
